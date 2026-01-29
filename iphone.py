@@ -1,12 +1,12 @@
-import urllib2
+import urllib.request
 import time
 addr='http://store.apple.com/hk/browse/home/shop_iphone/family/iphone'
 while (1==1):
 	time.sleep(10)
-	response = urllib2.urlopen(addr)
+	response = urllib.request.urlopen(addr)
 	html = response.read()
 	x=html.find("Unavailable")
 	if (x<0):
-		print 'Selling IPhone4'
+		print('Selling IPhone4')
 	else:
-		print 'No Iphone Sells Orz'
+		print('No Iphone Sells Orz')
